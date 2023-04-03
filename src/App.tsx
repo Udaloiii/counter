@@ -127,19 +127,28 @@ function App() {
                                        setDisableIncr(true)
                                        setStartInputError("")
                                        setTextForSet("enter values and press 'set'")
-                                       if (+event.currentTarget.value > startValue && startValue >=0) {
+                                       if (+event.currentTarget.value > startValue && startValue >= 0) {
                                            setMaxInputError("")
                                            setDisableSet(false)
                                            setMaxValue(+event.currentTarget.value)
-                                       } else if (+event.currentTarget.value === startValue && +event.currentTarget.value >= 0) {
+                                       } else if (+event.currentTarget.value === startValue && +event.currentTarget.value > 0) {
                                            setMaxValue(+event.currentTarget.value)
                                            setMaxInputError("error")
-                                           setError("maxValue = startValue")
+                                           setError("maxValue are not more then startValue")
                                            setDisableSet(true)
-                                           return
-                                       } else {
+                                       } else if (+event.currentTarget.value <= 0 && (startValue < 0 || startValue < -1)) {
+                                           setMaxValue(+event.currentTarget.value)
                                            setMaxInputError("error")
                                            setError("rechange startValue")
+                                           setDisableSet(true)
+                                       } else if (+event.currentTarget.value === 0) {
+                                           setMaxValue(+event.currentTarget.value)
+                                           setMaxInputError("error")
+                                           setError("maxValue are not more then startValue")
+                                           setDisableSet(true)
+                                       } else {
+                                           setMaxInputError("error")
+                                           setError("maxValue are not more then startValue")
                                        }
                                    }}/>
                         </div>
@@ -159,15 +168,14 @@ function App() {
                                        } else if (+event.currentTarget.value === -1 || +event.currentTarget.value === maxValue) {
                                            setStartValue(+event.currentTarget.value)
                                            setStartInputError("error")
-                                           setError("value < 0 or = maxValue")
+                                           setError("startValue < 0 or = maxValue")
                                            setStartInputError("error")
                                            setDisableSet(true)
                                        } else {
-                                           setError("value < 0 or = maxValue")
+                                           setError("startValue < 0 or = maxValue")
                                        }
                                    }}/>
                         </div>
-
                     </div>
                 </div>
                 <div className={style.mainOperationBlock}>
