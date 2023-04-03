@@ -1,0 +1,144 @@
+.App {
+    background-color: #1e1d1d;
+    /*width:100vw;    */
+    max-width:100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.block {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*width: 600px;*/
+    flex: 0 1 45%;
+    height: 500px;
+    border: 3px solid aqua;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.resultBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    font-size: 3em;
+    /*width: 500px;*/
+    flex: 0 1 80%;
+    height: 250px;
+    border: 3px solid aqua;
+    border-radius: 25px;
+}
+
+.mainOperationBlock {
+    display: flex;
+    justify-content: space-around;
+}
+.operationBlock {
+    /*width: 500px;*/
+    flex: 0 1 80%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid aqua;
+    border-radius: 25px;
+}
+
+.operation {
+    /*width: 100px;*/
+    flex: 0 1 33.3333%;
+    height: 50px;
+    border: 1px solid aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: aqua;
+    font-size: 1.5em;
+}
+
+.valueBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: aqua;
+    /*font-size: 3em;*/
+    /*width: 500px;*/
+    flex: 0 1 80%;
+    height: 250px;
+    border: 3px solid aqua;
+    border-radius: 25px;
+}
+
+.value {
+    /*width: 400px;*/
+    /*flex: 0 1 80%;*/
+    width: 80%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: yellow;*/
+    /*font-size: 2em;*/
+
+}
+
+.nameValue {
+    flex: 0 1 33.3%;
+    font-size: calc(14px + 16 * (80vw / 1280));
+}
+
+.input {
+    margin-left: auto;
+    /*flex: 0 1 33.3%;*/
+    width: 30%;
+    border: 2px solid aqua;
+    border-radius: 5px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/*input:valid {*/
+/*    border: 2px solid green;*/
+/*}*/
+
+input:focus {
+    border: 2px solid green;
+}
+
+.error {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    font-size: calc(22px + 16 * (100vw / 1280));
+    color: red;
+    padding: 15px ;
+}
+
+.inputError {
+    width: 30%;
+    border: 2px solid red;
+    border-radius: 5px;
+    height: 30px;
+    color: red;
+}
+
+.setText {    display: flex;
+    justify-content: center;
+    color: aqua;
+    font-size: calc(24px + 16 * (100vw / 1280));
+    padding: 15px ;
+}
